@@ -6,6 +6,7 @@ import { registerBalanceSummary } from "./tools/balance-summary.js";
 import { registerRevenueSummary } from "./tools/revenue-summary.js";
 import { registerPayoutReconciliation } from "./tools/payout-reconciliation.js";
 import { registerPayoutDetail } from "./tools/payout-detail.js";
+import { registerRevenueByLocation } from "./tools/revenue-by-location.js";
 
 const registry = buildRegistry();
 
@@ -19,6 +20,7 @@ registerBalanceSummary(server, registry);
 registerRevenueSummary(server, registry);
 registerPayoutReconciliation(server, registry);
 registerPayoutDetail(server, registry);
+registerRevenueByLocation(server, registry);
 
 const transport = new StdioServerTransport();
 await server.connect(transport);
